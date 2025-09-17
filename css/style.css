@@ -196,6 +196,11 @@ h2 {
     text-decoration: underline;
 }
 
+.map-container {
+    margin-top: 2rem;
+    box-shadow: var(--shadow);
+}
+
 /* Footer */
 footer {
     background-color: var(--text-color);
