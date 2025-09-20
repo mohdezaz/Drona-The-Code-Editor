@@ -3,66 +3,88 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact - Home Tutor</title>
+    <title>Contact Us - Cluster Classes</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
     <header>
         <div class="container">
             <div id="branding">
-                <h1><span class="highlight">Home</span> Tutor</h1>
+                <h1><span class="highlight">Cluster</span> Classes</h1>
             </div>
             <nav>
                 <a href="#" class="menu-icon">&#9776;</a>
                 <ul>
                     <li><a href="index.html">Home</a></li>
                     <li><a href="about.html">About</a></li>
-                    <li><a href="services.html">Services</a></li>
+                    <li><a href="courses.html">Courses</a></li>
                     <li><a href="testimonials.html">Testimonials</a></li>
                     <li class="current"><a href="contact.html">Contact</a></li>
                 </ul>
             </nav>
         </div>
     </header>
-    <main>
+    <main class="container">
         <section id="contact-info">
             <h2>Get in Touch</h2>
-            <p>I would love to hear from you! Please feel free to reach out with any questions or to schedule a consultation.</p>
+            <p>We would love to hear from you! Please feel free to reach out with any questions or to schedule a consultation.</p>
             <ul>
-                <li><strong>Email:</strong> <a href="mailto:john.doe@example.com">john.doe@example.com</a></li>
-                <li><strong>Phone:</strong> (123) 456-7890</li>
+                <li><strong>Email:</strong> <a href="mailto:clusterclasses0001@gmail.com">clusterclasses0001@gmail.com</a></li>
+                <li><strong>Phone:</strong> <a href="tel:+917291878414">+91 7291878414</a></li>
+                <li><strong>Address:</strong> Allama Shibli Nomani Road, Block A, Okhla, New Delhi, Delhi 110025</li>
             </ul>
         </section>
 
+        <section id="location-map">
+            <h2>Our Location</h2>
+            <div class="map-container">
+                 <iframe src="https://maps.google.com/maps?q=Allama+Shibli+Nomani+Road,+Block+A,+Okhla,+New+Delhi,+Delhi+110025&t=&z=15&ie=UTF8&iwloc=&output=embed" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </section>
+
         <section id="contact-form">
-            <h2>Send Us a Message</h2>
-            <form action="#" method="post">
+            <h2>Send Us an Inquiry</h2>
+            <form>
                 <div class="form-group">
-                    <label for="name">Your Name:</label>
-                    <input type="text" id="name" name="name" required>
+                    <label for="student_name">Student's Name:</label>
+                    <input type="text" id="student_name" name="student_name" required>
                 </div>
                 <div class="form-group">
-                    <label for="email">Your Email:</label>
+                    <label for="parent_name">Parent's Name:</label>
+                    <input type="text" id="parent_name" name="parent_name">
+                </div>
+                <div class="form-group">
+                    <label for="email">Email Address:</label>
                     <input type="email" id="email" name="email" required>
                 </div>
                 <div class="form-group">
-                    <label for="grade">Grade Level:</label>
-                    <input type="text" id="grade" name="grade" placeholder="e.g., Class 10th, JEE Aspirant">
+                    <label for="phone">Phone Number:</label>
+                    <input type="tel" id="phone" name="phone" required>
                 </div>
                 <div class="form-group">
-                    <label for="subject">Subject of Interest:</label>
-                    <input type="text" id="subject" name="subject" placeholder="e.g., Physics, NEET Chemistry">
+                    <label for="class">Class / Grade:</label>
+                    <input type="text" id="class" name="class">
+                </div>
+                <div class="form-group">
+                    <label for="course_interest">Course of Interest:</label>
+                    <select id="course_interest" name="course_interest" required>
+                        <option value="" disabled selected>-- Select a Course --</option>
+                        <option value="NEET Preparation">NEET Preparation</option>
+                        <option value="JEE Main & Advanced">JEE Main & Advanced</option>
+                        <option value="Foundation Courses">Foundation Courses (6th-10th)</option>
+                        <option value="Academic Programs">Academic Programs (11th-12th)</option>
+                    </select>
                 </div>
                 <div class="form-group">
                     <label for="message">Your Message:</label>
                     <textarea id="message" name="message" rows="5" required></textarea>
                 </div>
-                <button type="submit">Send Message</button>
+                <button type="submit">Submit Inquiry</button>
             </form>
         </section>
     </main>
     <footer>
-        <p>&copy; 2025 Home Tutor. All rights reserved.</p>
+        <p>&copy; 2025 Cluster Classes. All rights reserved.</p>
     </footer>
     <script src="js/script.js"></script>
 </body>
