@@ -3,105 +3,132 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cluster Classes - Expert Coaching for NEET & JEE</title>
-    <link rel="stylesheet" href="css/style.css">
+    <title>Cluster Classes - Premier Coaching for NEET & JEE</title>
+    <link rel="stylesheet" href="/css/style.css">
 </head>
 <body>
+
+    <div class="top-bar">
+        <div class="container">
+            <span>Phone: <a href="tel:+917291878414">+91 7291878414</a></span>
+            <span>Email: <a href="mailto:clusterclasses0001@gmail.com">clusterclasses0001@gmail.com</a></span>
+        </div>
+    </div>
+
     <header>
         <div class="container">
-            <div id="branding">
-                <h1><span class="highlight">Cluster</span> Classes</h1>
+            <div class="logo">
+                <a href="/index.html">Cluster Classes</a>
             </div>
             <nav>
                 <a href="#" class="menu-icon">&#9776;</a>
                 <ul>
-                    <li class="current"><a href="index.html">Home</a></li>
-                    <li><a href="about.html">About</a></li>
+                    <li><a href="/index.html">Home</a></li>
+                    <li><a href="/about.html">About Us</a></li>
                     <li class="dropdown">
-                        <a href="courses.html" class="dropbtn">Courses</a>
+                        <a href="/courses.html">Courses</a>
                         <div class="dropdown-content">
-                            <a href="courses/neet.html">NEET</a>
-                            <a href="courses/jee.html">JEE</a>
-                            <a href="courses/12th.html">Class 12th</a>
-                            <a href="courses/11th.html">Class 11th</a>
-                            <a href="courses/10th.html">Class 10th</a>
-                            <a href="courses/9th.html">Class 9th</a>
-                            <a href="courses/8th.html">Class 8th</a>
-                            <a href="courses/7th.html">Class 7th</a>
-                            <a href="courses/6th.html">Class 6th</a>
+                            <a href="/courses/neet.html">NEET</a>
+                            <a href="/courses/jee.html">JEE</a>
+                            <a href="/courses/12th.html">Class 12th</a>
+                            <a href="/courses/11th.html">Class 11th</a>
+                            <a href="/courses/10th.html">Class 10th</a>
+                            <a href="/courses/9th.html">Class 9th</a>
+                            <a href="/courses/8th.html">Class 8th</a>
+                            <a href="/courses/7th.html">Class 7th</a>
+                            <a href="/courses/6th.html">Class 6th</a>
                         </div>
                     </li>
-                    <li><a href="testimonials.html">Testimonials</a></li>
-                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="/testimonials.html">Testimonials</a></li>
+                    <li><a href="/contact.html">Contact Us</a></li>
                 </ul>
             </nav>
         </div>
     </header>
+
     <main>
-        <section id="hero" style="background-image: url('https://images.unsplash.com/photo-1509062522246-3755977927d7?fm=jpg&q=60&w=3000');">
+        <section id="hero">
             <div class="container">
-                <h2>Your Journey to Success in NEET & JEE Starts Here</h2>
-                <p>Join Cluster Classes and unlock your potential with our expert guidance and comprehensive curriculum.</p>
-                <a href="courses.html" class="cta-button">Explore Our Courses</a>
+                <h1>Welcome to Cluster Classes</h1>
+                <p>Your trusted partner for success in NEET, JEE, and school examinations.</p>
             </div>
         </section>
 
-        <div class="container">
-            <section id="introduction">
-                <h2>Your Partner in Academic Success</h2>
-                <p>
-                    Cluster Classes is a premier coaching institute dedicated to providing high-quality education and guidance. We specialize in comprehensive coaching for competitive exams like NEET and JEE, alongside foundational programs for students from grades 6 to 12. Our mission is to empower students with the knowledge and skills to achieve their academic goals.
-                </p>
-            </section>
+        <section id="inquiry-form">
+            <div class="container">
+                <h2>Quick Inquiry</h2>
+                <form action="#">
+                    <div class="form-group">
+                        <input type="text" name="student_name" placeholder="Student's Name" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" name="parent_name" placeholder="Parent's Name">
+                    </div>
+                    <div class="form-group">
+                        <input type="email" name="email" placeholder="Email Address" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="tel" name="phone" placeholder="Phone Number" required>
+                    </div>
+                     <div class="form-group">
+                        <select name="course_interest" required>
+                            <option value="" disabled selected>Select Course of Interest</option>
+                            <option value="NEET">NEET</option>
+                            <option value="JEE">JEE</option>
+                            <option value="12th">Class 12th</option>
+                            <option value="11th">Class 11th</option>
+                            <option value="10th">Class 10th</option>
+                            <option value="9th">Class 9th</option>
+                            <option value="8th">Class 8th</option>
+                            <option value="7th">Class 7th</option>
+                            <option value="6th">Class 6th</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                       <textarea name="message" placeholder="Your Message"></textarea>
+                    </div>
+                    <button type="submit" class="btn">Submit Inquiry</button>
+                </form>
+            </div>
+        </section>
 
-            <section id="our-courses">
-                <h2>Our Courses</h2>
-                <div class="features">
-                    <div class="feature">
-                        <h3>NEET Preparation</h3>
-                        <p>Specialized coaching for medical aspirants. Focused on building a strong foundation for top scores.</p>
-                        <a href="courses/neet.html" class="cta-button-small">Learn More</a>
-                    </div>
-                    <div class="feature">
-                        <h3>JEE Preparation</h3>
-                        <p>Comprehensive training for engineering aspirants for both Main and Advanced levels.</p>
-                        <a href="courses/jee.html" class="cta-button-small">Learn More</a>
-                    </div>
-                    <div class="feature">
-                        <h3>Foundation (6th-10th)</h3>
-                        <p>Building strong fundamentals in core subjects to prepare for future challenges.</p>
-                        <a href="courses.html" class="cta-button-small">Learn More</a>
-                    </div>
-                     <div class="feature">
-                        <h3>Senior Secondary (11th-12th)</h3>
-                        <p>Integrated programs to excel in board exams alongside competitive preparation.</p>
-                        <a href="courses.html" class="cta-button-small">Learn More</a>
-                    </div>
-                </div>
-            </section>
+        <section id="about">
+            <div class="container">
+                <h2>About Cluster Classes</h2>
+                <p>Cluster Classes is a premier coaching institute dedicated to providing high-quality education and guidance for NEET and JEE aspirants. Our experienced faculty and proven teaching methodologies have helped countless students achieve their dreams of getting into top medical and engineering colleges. We also provide strong foundational coaching for students in classes 6th to 12th.</p>
+            </div>
+        </section>
 
-            <section id="why-choose-us">
+        <section id="why-us">
+            <div class="container">
                 <h2>Why Choose Us?</h2>
-                <div class="features">
-                    <div class="feature">
+                <div class="features-grid">
+                    <div class="feature-item">
                         <h3>Expert Faculty</h3>
-                        <p>Learn from a team of highly experienced and dedicated teachers who are masters in their respective subjects.</p>
+                        <p>Our teachers are highly experienced and dedicated to providing the best learning experience.</p>
                     </div>
-                    <div class="feature">
-                        <h3>Proven Results</h3>
-                        <p>Our structured approach and focus on excellence have consistently produced outstanding results in competitive exams.</p>
+                    <div class="feature-item">
+                        <h3>Comprehensive Curriculum</h3>
+                        <p>We provide a well-structured and comprehensive curriculum covering all subjects in depth.</p>
                     </div>
-                    <div class="feature">
-                        <h3>Comprehensive Study Material</h3>
-                        <p>Get access to curated study notes, practice papers, and mock tests designed to cover the entire syllabus.</p>
+                    <div class="feature-item">
+                        <h3>Regular Mock Tests</h3>
+                        <p>We conduct regular mock tests to evaluate performance and identify areas for improvement.</p>
+                    </div>
+                    <div class="feature-item">
+                        <h3>Personalized Attention</h3>
+                        <p>We believe in providing personalized attention to every student to help them reach their potential.</p>
                     </div>
                 </div>
-            </section>
-        </div>
+            </div>
+        </section>
     </main>
+
     <footer>
-        <p>&copy; 2025 Cluster Classes. All rights reserved.</p>
+        <div class="container">
+            <p>&copy; 2025 Cluster Classes. All rights reserved.</p>
+        </div>
     </footer>
-    <script src="js/script.js"></script>
+    <script src="/js/script.js"></script>
 </body>
 </html>
