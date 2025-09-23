@@ -1,330 +1,303 @@
-@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap');
-
-/* General Body Styles */
+/* Global Styles & Variables */
 :root {
-    --primary-color: #3a7bd5;
-    --secondary-color: #3a60d5;
-    --dark-color: #333;
-    --light-color: #f4f4f4;
-    --shadow: 0 5px 15px rgba(0,0,0,0.1);
+    --primary-color: #0056b3;
+    --secondary-color: #007bff;
+    --light-color: #f8f9fa;
+    --dark-color: #343a40;
+    --text-color: #333;
+    --white-color: #fff;
+    --shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 
-body {
-    font-family: 'Lato', sans-serif;
-    line-height: 1.6;
+body, html {
     margin: 0;
     padding: 0;
-    background: #fff;
-    color: #333;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    background-color: var(--white-color);
+    color: var(--text-color);
 }
 
 .container {
-    width: 80%;
-    margin: auto;
-    overflow: hidden;
-    padding: 0 20px;
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
 }
 
-/* Header and Navigation */
+h1, h2, h3 {
+    color: var(--primary-color);
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: 2.5rem;
+}
+
+a {
+    text-decoration: none;
+    color: var(--secondary-color);
+}
+
+/* Top Bar */
+.top-bar {
+    background-color: var(--primary-color);
+    color: var(--white-color);
+    padding: 0.5rem 0;
+    font-size: 0.9rem;
+}
+
+.top-bar .container {
+    display: flex;
+    justify-content: flex-end;
+    gap: 1.5rem;
+}
+
+.top-bar a {
+    color: var(--white-color);
+}
+
+/* Header */
 header {
-    background: var(--dark-color);
-    color: #fff;
+    background: var(--white-color);
     padding: 1rem 0;
-    border-bottom: 5px solid var(--primary-color);
+    border-bottom: 1px solid #eee;
+    box-shadow: var(--shadow);
     position: sticky;
     top: 0;
-    z-index: 100;
+    z-index: 1000;
 }
 
-header a {
-    color: #fff;
-    text-decoration: none;
-    text-transform: uppercase;
-    font-size: 16px;
-    transition: color 0.3s ease;
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
-header ul {
+header .logo a {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--primary-color);
+}
+
+header nav {
+    position: relative; /* This is the fix */
+}
+
+header nav ul {
+    margin: 0;
     padding: 0;
-    margin: 0;
     list-style: none;
-    float: right;
-    margin-top: 5px;
+    display: flex;
+    gap: 1.5rem;
 }
 
-header li {
-    display: inline;
-    padding: 0 20px;
+header nav a {
+    font-weight: 600;
+    font-size: 1rem;
+    padding: 0.5rem 0;
+    border-bottom: 2px solid transparent;
+    transition: color 0.3s, border-bottom 0.3s;
 }
 
-header #branding {
-    float: left;
-}
-
-header #branding h1 {
-    margin: 0;
-    font-size: 24px;
-}
-
-header .highlight {
+header nav a:hover {
     color: var(--primary-color);
-    font-weight: bold;
+    border-bottom: 2px solid var(--primary-color);
 }
 
-header .current a {
-    color: var(--primary-color);
-    font-weight: bold;
+/* Dropdown (reusing from previous implementation, adapted for new style) */
+.dropdown {
+    position: relative;
 }
 
-header a:hover {
-    color: var(--primary-color);
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: var(--white-color);
+    min-width: 200px;
+    box-shadow: var(--shadow);
+    z-index: 1001;
+    border-radius: 5px;
+    overflow: hidden;
 }
+
+.dropdown-content a {
+    color: var(--text-color);
+    padding: 12px 16px;
+    display: block;
+    border-bottom: none;
+}
+.dropdown-content a:hover {
+    background-color: var(--light-color);
+    color: var(--primary-color);
+    border-bottom: none;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
 
 /* Hero Section */
 #hero {
-    min-height: 500px;
-    background-position: center;
-    background-size: cover;
-    color: #fff;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    position: relative;
-}
-
-#hero::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0,0,0,0.5);
-}
-
-#hero .container {
-    position: relative;
-    z-index: 1;
-}
-
-#hero h2 {
-    font-size: 4rem;
-    margin-bottom: 1rem;
-}
-
-#hero p {
-    font-size: 1.5rem;
-}
-
-.cta-button {
-    display: inline-block;
-    background: var(--primary-color);
-    color: #fff;
-    padding: 12px 25px;
-    text-decoration: none;
-    border-radius: 5px;
-    margin-top: 20px;
-    font-weight: bold;
-    transition: background 0.3s ease;
-}
-
-.cta-button:hover {
-    background: var(--secondary-color);
-}
-
-/* Sections */
-section {
-    padding: 60px 0;
-}
-
-section h2 {
-    text-align: center;
-    margin-bottom: 40px;
-    font-size: 2.5rem;
-}
-
-/* Features */
-.features {
-    display: flex;
-    justify-content: space-around;
-    text-align: center;
-    gap: 20px;
-}
-
-.feature {
     background: var(--light-color);
-    padding: 30px;
-    border-radius: 5px;
-    box-shadow: var(--shadow);
-    transition: transform 0.3s ease;
-}
-
-.feature:hover {
-    transform: translateY(-5px);
-}
-
-/* About Me */
-.about-content {
-    display: flex;
-    align-items: center;
-    gap: 40px;
-}
-
-.about-content img {
-    border-radius: 50%;
-    max-width: 200px;
-    box-shadow: var(--shadow);
-}
-
-/* Pricing Table */
-.pricing-table {
-    display: flex;
-    justify-content: space-around;
-    gap: 20px;
-}
-
-.pricing-plan {
-    border: 1px solid #ddd;
-    padding: 30px;
-    width: 30%;
-    background: #fff;
+    padding: 4rem 0;
     text-align: center;
-    border-radius: 5px;
-    box-shadow: var(--shadow);
-    transition: transform 0.3s ease;
 }
 
-.pricing-plan:hover {
-    transform: translateY(-5px);
+#hero h1 {
+    font-size: 3rem;
 }
 
-.pricing-plan .price {
-    font-size: 2.5rem;
-    font-weight: bold;
-    color: var(--primary-color);
+/* Inquiry Form Section */
+#inquiry-form {
+    background-color: var(--white-color);
+    padding: 3rem 0;
+    border-bottom: 1px solid #eee;
 }
 
-/* Testimonials */
-.testimonial {
-    background: var(--light-color);
-    border-left: 5px solid var(--primary-color);
-    padding: 20px;
-    margin-bottom: 20px;
-    border-radius: 5px;
-    box-shadow: var(--shadow);
+#inquiry-form form {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1rem;
+    align-items: center;
 }
 
-.testimonial cite {
-    display: block;
-    text-align: right;
-    margin-top: 10px;
-    font-weight: bold;
-    color: var(--primary-color);
-}
-
-/* Form */
-#contact-form form {
-    max-width: 700px;
-    margin: auto;
-}
-
-.form-group {
-    margin-bottom: 15px;
-}
-
-.form-group label {
-    display: block;
-    margin-bottom: 5px;
-}
-
-.form-group input, .form-group textarea {
+#inquiry-form .form-group {
     width: 100%;
-    padding: 12px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
 }
 
-button {
-    display: inline-block;
-    width: auto;
-    padding: 12px 25px;
-    background: var(--primary-color);
-    color: #fff;
-    border: 0;
+#inquiry-form input, #inquiry-form select, #inquiry-form textarea {
+    width: 100%;
+    padding: 0.8rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    font-family: inherit;
+    font-size: 1rem;
+}
+
+#inquiry-form textarea {
+    grid-column: 1 / -1; /* Span full width */
+}
+
+#inquiry-form .btn {
+    background-color: var(--secondary-color);
+    color: var(--white-color);
+    padding: 0.9rem;
+    border: none;
     border-radius: 5px;
     cursor: pointer;
-    font-weight: bold;
-    transition: background 0.3s ease;
+    font-size: 1.1rem;
+    font-weight: 600;
+    grid-column: 1 / -1; /* Span full width */
+    transition: background-color 0.3s;
 }
 
-button:hover {
-    background: var(--secondary-color);
+#inquiry-form .btn:hover {
+    background-color: var(--primary-color);
+}
+
+/* Content Sections (About, Why Us) */
+#about, #why-us {
+    padding: 4rem 0;
+    background-color: #fdfdfd;
+}
+
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+}
+
+.feature-item {
+    background: var(--white-color);
+    padding: 2rem;
+    text-align: center;
+    box-shadow: var(--shadow);
+    border-radius: 5px;
+    border-top: 4px solid var(--secondary-color);
+}
+
+.feature-item h3 {
+    font-size: 1.5rem;
+    margin-top: 0;
+}
+
+.testimonial-item {
+    background: var(--white-color);
+    padding: 2rem;
+    margin-bottom: 2rem;
+    box-shadow: var(--shadow);
+    border-radius: 5px;
+    border-left: 5px solid var(--secondary-color);
+}
+
+.testimonial-item cite {
+    display: block;
+    margin-top: 1rem;
+    font-weight: 600;
+    text-align: right;
+    color: var(--primary-color);
 }
 
 /* Footer */
 footer {
-    text-align: center;
-    padding: 20px;
     background: var(--dark-color);
-    color: #fff;
-    margin-top: 40px;
+    color: var(--white-color);
+    text-align: center;
+    padding: 2rem 0;
+    margin-top: 2rem;
 }
 
-/* Mobile Nav */
+/* Responsive Design */
 .menu-icon {
     display: none;
-    color: #fff;
-    font-size: 30px;
-    position: absolute;
-    right: 20px;
-    top: 25px;
+    font-size: 1.8rem;
+    color: var(--primary-color);
     cursor: pointer;
 }
 
-@media(max-width: 768px) {
-    header #branding,
-    header nav,
-    header nav li {
-        float: none;
-        text-align: center;
-        width: 100%;
-    }
-
-    header {
-        padding-bottom: 20px;
-    }
-
-    header nav ul {
-        display: none;
-        width: 100%;
-        padding-top: 20px;
+@media (max-width: 768px) {
+    header .container {
+        flex-direction: row;
+        justify-content: space-between;
     }
 
     .menu-icon {
         display: block;
     }
 
-    header nav ul.show {
-        display: block;
-    }
-
-    header nav li {
-        display: block;
-        padding: 10px 0;
-    }
-
-    .features, .pricing-table, .about-content {
+    header nav ul {
+        display: none;
         flex-direction: column;
-    }
-
-    .feature, .pricing-plan, .about-content img {
+        align-items: center;
+        position: absolute;
+        top: 75px; /* Adjust based on header height */
+        left: 0;
         width: 100%;
-        margin-bottom: 20px;
-        box-sizing: border-box;
+        background-color: var(--white-color);
+        box-shadow: var(--shadow);
+        padding: 1rem 0;
     }
 
-    .about-content {
+    header nav ul.show {
+        display: flex;
+    }
+
+    header nav ul li {
+        width: 100%;
         text-align: center;
+    }
+
+    header nav ul li a {
+        padding: 1rem;
+        border-bottom: 1px solid #eee;
+        width: 100%;
+    }
+
+    header nav a:hover {
+        border-bottom: none; /* Remove border on hover for mobile */
     }
 }
